@@ -34,3 +34,29 @@ document.querySelectorAll('.cart_ctl .spinbox').forEach((e) => {
     }
   })
 })
+
+var thumbs = new Swiper(".card_thumbs", {
+  spaceBetween: 5,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+  cssMode: true,
+  breakpoints: {
+    450: {
+      spaceBetween: 9,
+    }
+  }
+});
+
+const card_slider = new Swiper('.card_main_slider', {
+  // cssMode: true,
+  effect: "fade",
+  grabCursor: true,
+  thumbs: {
+    swiper: thumbs,
+  },
+});
+
+$('.card_thumbs .swiper-slide').on('mouseover', function() {
+  card_slider.slideTo($(this).index());
+})
