@@ -426,14 +426,14 @@ footer .mobile_text a {
   width: 100%;
   background-color: var(--beige);
   z-index: 10;
-  padding: 15px;
+  padding: 15px 40px;
   box-sizing: border-box;
   opacity: 0;
   transition: opacity 0.4s;
 }
 
 .mobile_menu .logo {
-  height: 33px;
+  height: 49.892px;
   width: auto;
   object-fit: contain;
 }
@@ -1156,7 +1156,7 @@ footer .mobile_text a {
     height: 204px;
   }
 
-  .index_footer .logo {
+  .index_footer .logo_wrap {
     display: none;
   }
 
@@ -1609,6 +1609,13 @@ footer .mobile_text a {
     margin-top: 45px;
     margin-bottom: 33px;
     height: 398px;
+  }
+
+  .mobile_menu {
+    padding: 15px;
+  }
+  .mobile_menu .logo {
+    height: 33px;
   }
 }
 
