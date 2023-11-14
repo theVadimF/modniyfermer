@@ -1089,6 +1089,7 @@ footer .mobile_text a {
   font-weight: 400;
   margin-bottom: 15px;
   line-height: normal;
+  max-width: 490px;
 }
 
 .product_card .price {
@@ -1115,6 +1116,17 @@ footer .mobile_text a {
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.yagoda_map_wrap .inner {
+  width: 100%;
+  height: fit-content;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 63px;
+  margin-bottom: 73px;
+  padding: 0;
+  height: 626px;
 }
 
 @media (max-width: 1180px) {
@@ -1453,10 +1465,6 @@ footer .mobile_text a {
     display: none;
   }
 
-  .big_cards .cart_ctl {
-    justify-content: space-between;
-  }
-
   .big_cards .cart_ctl .spinbox {
     padding: 10px 10px;
     gap: 7px;
@@ -1596,6 +1604,12 @@ footer .mobile_text a {
   .top_link {
     margin-top: 46px;
   }
+
+  .yagoda_map_wrap .inner {
+    margin-top: 45px;
+    margin-bottom: 33px;
+    height: 398px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1607,16 +1621,24 @@ footer .mobile_text a {
     height: 250px;
   }
 
-  .product_card .cart_ctl {
+  .cart_ctl {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .product_card .cart_ctl .spinbox .input {
+  .cart_ctl .spinbox .input {
     flex-grow: 1;
   }
 
+  .cart_ctl .add {
+    width: 100%;
+  }
+
   .product_card .cart_ctl .add {
+    width: 100%;
+  }
+
+  .big_cards .cart_ctl .add {
     width: 100%;
   }
 }
