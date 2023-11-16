@@ -169,12 +169,18 @@ header .list a {
 
 header .right {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   align-items: center;
 }
 
 .cart {
   position: relative;
+}
+
+.cart img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .cart .item_counter {
@@ -188,13 +194,14 @@ header .right {
   padding: 4px;
   border-radius: 999px;
   font-size: 13.05px;
-  aspect-ratio: 1/1;
   min-width: 14px;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart .item_counter.__visible {
-  display: block;
+  display: flex;
 }
 
 .index_top header .list a {
@@ -549,15 +556,15 @@ footer .mobile_text a {
 .page_top .heading {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 48px;
+  font-size: 50px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 110%; /* 52.8px */
-  max-width: 590px;
+  font-weight: 500;
+  line-height: 55px;
+  max-width: 685px;
 }
 
-.page_top .graphic.__offset {
-  margin-bottom: -9px;
+.page_top .heading.__berry_offset {
+  margin-bottom: 0px;
 }
 
 .big_cards {
@@ -573,9 +580,9 @@ footer .mobile_text a {
 
 .big_cards .card {
   display: grid;
-  grid-template-columns: 1fr 405px;
-  gap: 72px;
-  padding: 47px 45px;
+  grid-template-columns: 1fr 436px;
+  gap: 50px;
+  padding: 50px;
   padding-bottom: 50px;
   border-radius: 30px;
   border: 2px solid var(--blue);
@@ -597,37 +604,47 @@ footer .mobile_text a {
 .big_cards .card .title {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 36px;
+  font-size: 40px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .big_cards .card .info {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  margin-top: 6px;
+  line-height: 30px; /* 150% */
+  margin-top: 15px;
 }
 
 .big_cards .card .info.__bottom {
-  margin-top: 26px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 39px;
 }
 
 .big_cards .card .price {
   color: #4C85AA;
   font-family: Cera Round Pro;
-  font-size: 36px;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: 700;
   margin-top: auto;
   margin-bottom: 21px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-image: url('./img/ico/ruble.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom 6px;
+  padding-right: 22px;
+  width: fit-content;
+}
+
+.big_cards .card .price .ruble {
+  margin-bottom: 2px;
 }
 
 .big_cards .link {
@@ -639,30 +656,49 @@ footer .mobile_text a {
   line-height: normal;
 }
 
+.big_cards .card .sale_start {
+  border-radius: 50px;
+  background: #EAEAEA;
+  max-width: 387px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .cart_ctl {
   display: flex;
-  gap: 11px;
+  gap: 20px;
 }
 
 .cart_ctl .add {
   color: #FFF;
   font-family: Cera Round Pro;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   padding: 0;
   border: none;
   background-color: var(--blue);
   border-radius: 30px;
-  width: 145px;
+  /* width: 145px;
+  height: 70px; */
+  padding: 17px 25px;
   height: 70px;
 }
 
 .cart_ctl .spinbox {
   border-radius: 30px;
   border: 1px solid #4C85AA;
-  padding: 18px 23px;
+  padding: 17px 25px;
   display: flex;
   gap: 10px;
 }
@@ -670,18 +706,26 @@ footer .mobile_text a {
 .cart_ctl .spinbox .btn {
   background: none;
   border: none;
-  font-size: 24px;
   font-weight: 400;
   color: var(--blue);
   display: flex;
   align-items: center;
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .cart_ctl .spinbox .input {
   background: none;
   border: none;
   color: var(--blue);
-  font-size: 24px;
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
   text-align: center;
   width: 30px;
 }
@@ -703,22 +747,24 @@ footer .mobile_text a {
 .berry_about .heading {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 48px;
+  font-size: 50px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: 500;
+  line-height: 55px;
   margin-bottom: 11px;
 }
 
 .berry_about .text {
   color: var(--blue);
-  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  line-height: 22px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
   max-width: 300px;
+}
+
+.berry_about .text strong {
+  font-weight: 500;
 }
 
 .berry_about .text.__top {
@@ -729,9 +775,9 @@ footer .mobile_text a {
 .berry_about .secondary {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 36px;
+  font-size: 50px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   margin-bottom: 40px;
   margin-top: 30px;
@@ -751,12 +797,10 @@ footer .mobile_text a {
 .berry_about .options .top {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 16px;
-  width: fit-content;
+  font-weight: 500;
+  line-height: 55px;
 }
 
 /* .main_footer {
@@ -1356,7 +1400,7 @@ footer .copyright {
     display: none;
   } */
 
-  .big_cards .card {
+  /* .big_cards .card {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1368,6 +1412,42 @@ footer .copyright {
 
   .big_cards .card .img {
     height: 300px;
+  } */
+
+  .big_cards .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .big_cards .card .right {
+    display: grid;
+    grid-template-columns: 1fr 150px
+  }
+
+  .big_cards .card .price {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: flex-end;
+    align-self: center;
+    margin-bottom: auto;
+  }
+
+  .big_cards .card .info {
+    grid-column: 1/3;
+  }
+
+  .big_cards .card .cart_ctl {
+    grid-column: 1/3;
+  }
+
+  .big_cards .card .sale_start {
+    grid-column: 1/3;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .big_cards .card .info {
+    margin-bottom: 20px;
   }
 
   .berry_about .options {
@@ -1375,7 +1455,9 @@ footer .copyright {
   }
 
   .page_top .graphic {
-    display: none;
+    width: 119px;
+    height: 83px;
+    align-self: flex-start;
   }
 
   .catalog_cards {
@@ -1452,14 +1534,31 @@ footer .copyright {
   }
 
   .page_top .heading {
-    font-size: 28px;
+    font-size: 26px;
+    line-height: normal;
+    align-self: flex-end;
+  }
+
+  .page_top .heading.__berry_offset {
+    margin-bottom: 0;
   }
 
   header .cart {
-    display: none;
+    width: 23.077px;
+    height: 19.948px;
   }
 
-  header .cart.__float {
+  header .cart .item_counter {
+    bottom: unset;
+    top: 0;
+    right: -7px;
+    font-size: 10px;
+    height: 8px;
+    min-width: 8px;
+    padding: 4px 3px;
+  }
+
+  /* header .cart.__float {
     display: block;
     position: fixed;
     right: 10px;
@@ -1474,7 +1573,7 @@ footer .copyright {
     border-radius: 999px;
     flex-shrink: 0;
     z-index: 2;
-  }
+  } */
 
   /* .page_top .cart {
     display: block;
@@ -1489,11 +1588,11 @@ footer .copyright {
     flex-shrink: 0;
   } */
 
-  .cart .item_counter {
+  /* .cart .item_counter {
     top: unset;
     right: 0px;
     bottom: 1px;
-  }
+  } */
   .page_top {
     gap: 10px;
   }
@@ -1606,12 +1705,8 @@ footer .copyright {
 
   .big_cards .card {
     gap: 13px;
-    padding: 24px 25px;
+    padding: 20px;
     padding-bottom: 28px;
-  }
-
-  .big_cards .card .price {
-    margin-top: 16px;
   }
 
   .big_cards .card .img {
@@ -1619,35 +1714,73 @@ footer .copyright {
   }
 
   .big_cards .card .title {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 102.2%;
   }
 
+  .big_cards .card .right {
+    grid-template-columns: 1fr 90px;
+  }
+
   .big_cards .card .info {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 5px;
+  }
+
+  .big_cards .card .sale_start {
+    max-width: 100%;
+    width: 100%;
+    font-size: 14px;
+    min-height: 35px;
+    height: fit-content;
+    padding: 10px;
   }
 
   .big_cards .card .info.__bottom {
-    display: none;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
   }
 
   .big_cards .card .price {
-    font-size: 24px;
+    font-size: 20px;
+    background-size: 10px auto;
+    background-position: right bottom 4.5px;
+    padding-right: 12px;
   }
 
   .big_cards .card .link {
-    display: none;
+    font-size: 14px;
   }
 
   .big_cards .cart_ctl .spinbox {
-    padding: 10px 10px;
+    padding: 8px 10px;
     gap: 7px;
+    grid-column: 1;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .big_cards .cart_ctl .spinbox .btn {
+    font-size: 14px;
+  }
+
+  .big_cards .cart_ctl .spinbox .input {
+    font-size: 14px;
+    line-height: 14px;
+    width: 40px;
   }
 
   .big_cards .cart_ctl .add {
     width: 109.754px;
     height: 58px;
-    font-size: 16px;
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    font-size: 14px;
+    max-width: 127px;
   }
 
   .berry_about .heading {
@@ -1787,6 +1920,7 @@ footer .copyright {
 
   .mobile_menu {
     padding: 10px;
+    padding-top: 15px;
   }
 
   .mobile_menu .logo {
@@ -1795,16 +1929,6 @@ footer .copyright {
 
   .index_content .block .left {
     align-items: center;
-  }
-}
-
-@media (max-width: 450px) {
-  .catalog_cards .card .img {
-    height: 78px;
-  }
-
-  .product_card .images .slide {
-    height: 250px;
   }
 
   .cart_ctl {
@@ -1818,14 +1942,33 @@ footer .copyright {
 
   .cart_ctl .add {
     width: 100%;
+    grid-column: 2;
   }
 
   .product_card .cart_ctl .add {
     width: 100%;
   }
 
-  .big_cards .cart_ctl .add {
-    width: 100%;
+  .berry_about .secondary {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .page_top .graphic.__berry {
+    width: 119px;
+    height: 83px;
+    margin-bottom: 23px
+  }
+}
+
+@media (max-width: 450px) {
+  .catalog_cards .card .img {
+    height: 78px;
+  }
+
+  .product_card .images .slide {
+    height: 250px;
   }
 }
 
