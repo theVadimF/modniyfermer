@@ -36,29 +36,29 @@ document.querySelectorAll('.cart_ctl .spinbox').forEach((e) => {
 })
 
 if ($('.product_card').length) {
-  let thumbs = new Swiper(".card_thumbs", {
-    spaceBetween: 5,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-    cssMode: true,
-    breakpoints: {
-      450: {
-        spaceBetween: 9,
-      }
-    }
-  });
-
   const card_slider = new Swiper('.card_main_slider', {
-    // cssMode: true,
-    effect: "fade",
     grabCursor: true,
-    thumbs: {
-      swiper: thumbs,
-    },
   });
 
-  $('.card_thumbs .swiper-slide').on('mouseover', function() {
-    card_slider.slideTo($(this).index());
+  $('.product_card .images .slider_ctl.__next').click(function() {
+    card_slider.slideNext();
+  })
+
+  $('.product_card .images .slider_ctl.__back').click(function() {
+    card_slider.slidePrev();
+  })
+
+  const review_slider = new Swiper('.review_slider', {
+    grabCursor: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+  });
+
+  $('.reviews .cards .control.__next').click(function() {
+    review_slider.slideNext();
+  })
+
+  $('.reviews .cards .control.__back').click(function() {
+    review_slider.slidePrev();
   })
 }
