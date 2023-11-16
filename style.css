@@ -64,51 +64,58 @@ video {
 }
 
 @font-face {
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   src: url("./fonts/CeraRoundPro-Thin.otf");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   src: url("./fonts/CeraRoundPro-Light.otf");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   src: url("./fonts/CeraRoundPro-Regular.otf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   src: url("./fonts/CeraRoundPro-Medium.otf");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   src: url("./fonts/CeraRoundPro-Bold.otf");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   src: url("./fonts/CeraRoundPro-Black.otf");
   font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("./fonts/Inter-Regular.ttf");
+  font-weight: 400;
   font-style: normal;
 }
 
 :root {
   --blue: #4C85AA;
   --beige: #F3F2ED;
-  font-family: Cera Round CY, sans-serif;
+  font-family: Cera Round Pro, sans-serif;
 }
 
 body {
@@ -117,7 +124,8 @@ body {
 
 .content-wrap {
   width: 100%;
-  max-width: 1280px;
+  /* max-width: 1280px; */
+  max-width: 1310px;
   padding-left: 40px;
   padding-right: 40px;
   margin-left: auto;
@@ -150,11 +158,13 @@ header .list {
 
 header .list a {
   color: var(--blue);
-  font-size: 18px;
+  /* font-family: Cera Round Pro; */
+  font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: normal;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 header .right {
@@ -193,30 +203,32 @@ header .right {
 
 .index_top .banner {
   position: relative;
-  margin-top: 32px;
+  margin-top: 51px;
 }
 
 .index_top .banner .img {
-  height: 310px;
+  height: 380px;
   width: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .index_top .heading {
-  color: #F3F2ED;
-  font-size: 48px;
+  color: #FFF;
+  font-family: Cera Round Pro;
+  font-size: 45px;
   font-style: normal;
   font-weight: 400;
-  margin-top: 35px;
-  max-width: 520px;
-  padding-bottom: 52px;
+  line-height: 55px; /* 122.222% */
+  max-width: 680px;
+  padding-top: 40px;
+  padding-bottom: 70px;
 }
 
 .index_top .banner .graphic {
   position: absolute;
-  bottom: -125px;
-  right: 22px;
+  bottom: -150px;
+  right: 0px;
 }
 
 .index_content {
@@ -230,11 +242,11 @@ header .right {
 .index_content .block {
   display: grid;
   height: 411px;
-  padding: 41px 48px;
+  padding: 50px;
   border: 2px solid var(--blue);
   border-radius: 30px;
   padding-bottom: 45px;
-  grid-template-columns: 1fr 195px;
+  grid-template-columns: 1fr 239px;
   gap: 57px;
   box-sizing: border-box;
 }
@@ -250,31 +262,34 @@ header .right {
   height: 325px;
   object-fit: cover;
   border-radius: 15px;
+  grid-column: 2;
 }
 
 .index_content .block .left {
   display: flex;
   flex-direction: column;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .index_content .block .title {
   color: var(--blue);
-  font-family: Cera Round CY;
-  font-size: 36px;
+  font-family: Cera Round Pro;
+  font-size: 40px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 102.2%;
+  font-weight: 500;
+  line-height: 36px;
   text-decoration: none;
   margin-bottom: 20px;
 }
 
 .index_content .block .about {
   color: var(--blue);
-  font-family: Cera Round CY;
-  font-size: 18px;
+  font-family: Cera Round Pro;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 24px;
   max-width: 400px;
   width: 100%;
   line-height: 28px;
@@ -284,19 +299,22 @@ header .right {
   border: none;
   background-color: var(--blue);
   border-radius: 30px;
-  width: 133px;
+  width: 160px;
   height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--beige);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   font-weight: 400;
   margin-top: auto;
 }
 
-.index_footer {
+/* .index_footer {
   border-top: 2px solid var(--blue);
   padding-top: 19px;
   padding-bottom: 24px;
@@ -342,7 +360,7 @@ header .right {
 
 .index_footer .top .phone {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -358,7 +376,7 @@ header .right {
 
 .index_footer .bottom .legal_link {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -366,7 +384,7 @@ header .right {
 
 .index_footer .bottom .copyright {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -381,12 +399,12 @@ footer .list {
 
 footer .list a {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
-}
+} */
 
 .mobile_menu_open {
   display: none;
@@ -395,9 +413,9 @@ footer .list a {
   padding: 0;
 }
 
-footer .mobile_text {
+/* footer .mobile_text {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -414,7 +432,7 @@ footer .mobile_text a {
 
 .index_footer .mobile_text {
   display: none;
-}
+} */
 
 
 .mobile_menu {
@@ -462,45 +480,58 @@ footer .mobile_text a {
   list-style: none;
   display: flex;
   flex-direction: column;
-  margin-top: 56px;
-  margin-bottom: 71px;
+  margin-top: 60px;
+  margin-bottom: 67px;
+  gap: 21px;
 }
 
 .mobile_menu .list a {
   text-decoration: none;
   color: var(--blue);
-  font-family: Cera Round CY;
-  font-size: 24px;
+  font-family: Cera Round Pro;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 197.7%;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
 }
 
 .mobile_menu .text {
   color: var(--blue);
-  font-family: Cera Round CY;
-  font-size: 18px;
+  font-family: Cera Round Pro;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 20px;
+  max-width: 220px;
   margin-bottom: 10px;
 }
 
 .mobile_menu .phone {
   color: var(--blue);
-  font-family: Cera Round CY;
-  font-size: 24px;
+  font-family: Cera Round Pro;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: normal;
   text-decoration: none;
   margin-bottom: 23px;
 }
 
 .mobile_menu .socials {
-  margin-top: 33px;
+  margin-top: 16px;
   display: flex;
-  gap: 12px;
+  gap: 20px;
+}
+
+.mobile_menu .socials .link {
+  background-color: var(--blue);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
 }
 
 .page_top {
@@ -517,7 +548,7 @@ footer .mobile_text a {
 
 .page_top .heading {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -565,7 +596,7 @@ footer .mobile_text a {
 
 .big_cards .card .title {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -575,7 +606,7 @@ footer .mobile_text a {
 
 .big_cards .card .info {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -590,7 +621,7 @@ footer .mobile_text a {
 
 .big_cards .card .price {
   color: #4C85AA;
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -601,7 +632,7 @@ footer .mobile_text a {
 
 .big_cards .link {
   color: #4C85AA;
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -615,7 +646,7 @@ footer .mobile_text a {
 
 .cart_ctl .add {
   color: #FFF;
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -671,7 +702,7 @@ footer .mobile_text a {
 
 .berry_about .heading {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -681,7 +712,7 @@ footer .mobile_text a {
 
 .berry_about .text {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -697,7 +728,7 @@ footer .mobile_text a {
 
 .berry_about .secondary {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -719,7 +750,7 @@ footer .mobile_text a {
 
 .berry_about .options .top {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -728,7 +759,7 @@ footer .mobile_text a {
   width: fit-content;
 }
 
-.main_footer {
+/* .main_footer {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -739,7 +770,7 @@ footer .mobile_text a {
 
 .main_footer .questions {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -756,7 +787,7 @@ footer .mobile_text a {
 .main_footer .socials {
   display: flex;
   gap: 12px;
-}
+} */
 
 .page_top .cart {
   display: none;
@@ -773,7 +804,7 @@ footer .mobile_text a {
   background: none;
   border: none;
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
@@ -801,7 +832,7 @@ footer .mobile_text a {
 
 .sort_toggle_small .toggle {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -847,7 +878,7 @@ footer .mobile_text a {
 
 .catalog_cards .card .name {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -859,7 +890,7 @@ footer .mobile_text a {
 
 .catalog_cards .card .info {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -877,7 +908,7 @@ footer .mobile_text a {
 
 .catalog_cards .card .price {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -888,7 +919,7 @@ footer .mobile_text a {
   text-decoration: none;
   color: var(--beige);
   text-align: center;
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -904,7 +935,7 @@ footer .mobile_text a {
 
 .about_text {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -993,7 +1024,7 @@ footer .mobile_text a {
 
 .about_bottom .bigger {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 48px;
   font-style: normal;
   font-weight: 400;
@@ -1001,7 +1032,7 @@ footer .mobile_text a {
 
 .about_bottom .big {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
@@ -1024,7 +1055,7 @@ footer .mobile_text a {
   align-items: center;
   text-decoration: none;
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -1038,7 +1069,7 @@ footer .mobile_text a {
 .top_link .link {
   text-decoration: none;
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-weight: 400;
 }
@@ -1084,7 +1115,7 @@ footer .mobile_text a {
 
 .product_card .name {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 48px;
   font-weight: 400;
   margin-bottom: 15px;
@@ -1094,7 +1125,7 @@ footer .mobile_text a {
 
 .product_card .price {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 8px;
@@ -1102,7 +1133,7 @@ footer .mobile_text a {
 
 .product_card .info {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-weight: 300;
   line-height: 125%;
@@ -1111,7 +1142,7 @@ footer .mobile_text a {
 
 .product_card .info_heading {
   color: var(--blue);
-  font-family: Cera Round CY;
+  font-family: Cera Round Pro;
   font-size: 16px;
   font-weight: 400;
   margin-top: 10px;
@@ -1129,18 +1160,102 @@ footer .mobile_text a {
   height: 626px;
 }
 
-@media (max-width: 1180px) {
+footer .top {
+  border-top: 2px solid var(--blue);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 56px;
+}
+
+footer .logo_wrap {
+  margin-top: 5px;
+}
+
+footer .cards {
+  display: flex;
+  gap: 21px;
+}
+
+footer .cards .card_icon {
+  height: 12px;
+  margin-top: 10px;
+}
+
+footer .cards .card_icon.__mc {
+  height: 19px;
+}
+
+footer .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .list a {
+  color: var(--blue);
+  font-family: Cera Round Pro ;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+footer .socials {
+  display: flex;
+  gap: 30px;
+}
+
+footer .bottom {
+  background: #EAEAEA;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+footer .bottom .content {
+  display: flex;
+  gap: 134px;
+  justify-content: flex-end;
+}
+
+footer .legal {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+footer .copyright {
+  color: var(--blue);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (max-width: 1260px) {
   .index_content {
     display: flex;
     flex-direction: column;
   }
 
   .index_content .block.__wide {
-    grid-template-columns: 1fr 195px;
+    grid-template-columns: 1fr 239px;
   }
 
   .about_bottom .right {
     padding-right: 0;
+  }
+
+  .index_top .banner .graphic {
+    width: 332px;
+    height: 267px;
+    bottom: -173px;
   }
 }
 
@@ -1150,13 +1265,62 @@ footer .mobile_text a {
   }
 }
 
-@media (max-width: 979px) {
-  .index_top .banner .graphic {
-    width: 232px;
-    height: 204px;
+@media (max-width: 1090px) {
+  .index_top .heading {
+    padding-top: 90px;
   }
 
-  .index_footer .logo_wrap {
+  .index_top .banner .graphic {
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 1060px) {
+  footer .top {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  footer .logo_wrap {
+    grid-row: 1;
+  }
+
+  footer .socials {
+    grid-row: 1;
+    grid-column: 2;
+    align-items: center;
+  }
+
+  footer .list {
+    grid-column: 1/3;
+    align-items: center;
+  }
+
+  footer .list.__contact {
+    grid-row: 2;
+    margin-top: 10px;
+  }
+
+  footer .list.__nav{
+    grid-row: 3;
+  }
+
+  footer .cards {
+    grid-column: 1/3;
+    grid-row: 4;
+    justify-self: center;
+  }
+
+  footer .bottom .content {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 979px) {
+  /* .index_footer .logo_wrap {
     display: none;
   }
 
@@ -1190,7 +1354,7 @@ footer .mobile_text a {
 
   .main_footer .logo_wrap {
     display: none;
-  }
+  } */
 
   .big_cards .card {
     display: flex;
@@ -1274,9 +1438,6 @@ footer .mobile_text a {
 }
 
 @media (max-width: 780px) {
-  .index_top .heading {
-    font-size: 36px;
-  }
 
   header {
     padding-top: 15px;
@@ -1352,26 +1513,22 @@ footer .mobile_text a {
 
 @media (max-width: 660px) {
   .content-wrap {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .index_top .heading {
-    margin-top: 61px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .index_top .banner {
-    margin-top: 57px;
+    margin-top: 25px;
   }
 
   .index_top .banner .graphic {
-    width: 146px;
-    height: 129px;
-    bottom: -44px;
+    width: 186.333px;
+    height: 111.8px;
+    bottom: -35px;
   }
 
   .index_top .banner .img {
-    height: 148px;
+    height: 160px;
   }
 
   .index_top header {
@@ -1385,12 +1542,21 @@ footer .mobile_text a {
   }
 
   .index_top .heading {
-    padding-bottom: 26px;
+    padding-bottom: 24px;
+    padding-top: 57px;
+    font-size: 24px;
+    line-height: 26px;
   }
 
   .index_content .block .title {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 5px;
+    margin-top: 0;
+  }
+
+  .index_content .block .title br {
+    display: none;
   }
 
   .index_content .block .about {
@@ -1398,29 +1564,37 @@ footer .mobile_text a {
     line-height: 20px;
   }
 
+  .index_content .block .about br {
+    display: none
+  }
+
   .index_content .block {
-    padding: 29px 24px;
-    grid-template-columns: 1fr 102px;
-    gap: 13px;
-    height: 271px;
+    padding: 20px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
   }
 
   .index_content .block.__wide {
     grid-template-columns: 1fr 102px;
-    gap: 13px;
+    gap: 15px;
   }
 
   .index_content .block .img {
-    height: 100%;
+    height: 164px;
+    width: 100%;
   }
 
   .index_content .block .btn {
-    width: 109.754px;
-    height: 58px;
-    font-size: 16px;
+    width: 127px;
+    height: 35px;
+    font-size: 14px;
+    margin-top: 32px;
   }
 
-  .main_footer {
+  /* .main_footer {
     display: grid;
     grid-template-columns: 1fr 85px;
   }
@@ -1428,7 +1602,7 @@ footer .mobile_text a {
   .main_footer .socials {
     grid-row: 1;
     grid-column: 2;
-  }
+  } */
 
   .big_cards .card {
     gap: 13px;
@@ -1612,10 +1786,15 @@ footer .mobile_text a {
   }
 
   .mobile_menu {
-    padding: 15px;
+    padding: 10px;
   }
+
   .mobile_menu .logo {
     height: 33px;
+  }
+
+  .index_content .block .left {
+    align-items: center;
   }
 }
 
