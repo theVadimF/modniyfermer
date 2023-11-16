@@ -10,7 +10,7 @@ $('.mobile_menu_close').click(async function() {
   $('.mobile_menu').removeClass('__open');
 })
 
-document.querySelectorAll('.cart_ctl .spinbox').forEach((e) => {
+document.querySelectorAll('.cart_ctl .spinbox:not(.__disabled)').forEach((e) => {
   let box = $(e).find('.input')
   console.log(box);
 
@@ -50,8 +50,16 @@ if ($('.product_card').length) {
 
   const review_slider = new Swiper('.review_slider', {
     grabCursor: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
+    breakpoints: {
+      1060: {
+        slidesPerView: 3,
+      },
+      800: {
+        slidesPerView: 2,
+      }
+    }
   });
 
   $('.reviews .cards .control.__next').click(function() {
