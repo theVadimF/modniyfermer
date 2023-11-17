@@ -2218,7 +2218,8 @@ footer .copyright {
 
   .order_list .item .name {
     width: 100%;
-    grid-column: 1/3;
+    grid-row: 1;
+    grid-column: 2/3;
     text-align: left;
     margin: 0;
     margin-bottom: 18px;
@@ -2491,6 +2492,30 @@ footer .copyright {
     border: none;
     background: none;
     margin-top: 4px;
+  }
+
+  .order_list.__yagoda .item {
+    display: grid;
+    gap: 0px 12px;
+    grid-template-columns: 120px 1fr 20px;
+  }
+
+  .order_list.__yagoda .item .thumb {
+    grid-column: 1;
+    grid-row: 1/4;
+  }
+
+  .order_list .item .name {
+    grid-column: 2/4;
+  }
+
+  .order_list .item .price {
+    grid-column: 2/4;
+    grid-row: 2;
+  }
+
+  .order_list.__yagoda .cart_ctl {
+    grid-column: 2;
   }
 }
 
@@ -3285,6 +3310,10 @@ footer .copyright {
 
   .sdek_order .map {
     margin-top: 20px;
+  }
+
+  .order_list .item {
+    padding: 20px;
   }
 }
 
