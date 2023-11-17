@@ -91,6 +91,23 @@
   border-radius: 20px;
   border: 2px solid #4C85AA;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom_map_wrap .info_box .choose {
+  color: #FFF;
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: var(--blue);
+  border: none;
+  padding: 17px 25px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 }
 
 .custom_map_wrap .name {
@@ -126,6 +143,10 @@
 .pickup_slider {
   margin-top: 60px;
   margin-bottom: 80px;
+}
+
+.pickup_slider.__checkout {
+  margin-bottom: 23px;
 }
 
 .pickup_slider .controls {
