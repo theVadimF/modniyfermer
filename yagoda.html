@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="map_points.css">
 </head>
 <body>
   <div class="mobile_menu">
@@ -135,9 +136,22 @@
       </div>
     </div>
   </div>
-  <div class="yagoda_map_wrap content-wrap">
-    <div class="inner">
+  <div class="custom_map_wrap content-wrap">
+    <!-- <div class="inner">
       <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4f811cc89718401157352b505b96cbb890ee0445e8e7e30029bf4480d2493165&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div> -->
+    <picture>
+      <source media="(max-width: 749px)" srcset="./img/map_screen_mobile.png">
+      <img src="./img/map_screen.png" alt="" class="map_img">
+    </picture>
+    <div class="blue_filter"></div>
+    <div class="points">
+      <button class="point __1 __active"></button>
+      <button class="point __2"></button>
+      <button class="point __3"></button>
+      <button class="point __4"></button>
+      <button class="point __5"></button>
+      <button class="point __6"></button>
     </div>
   </div>
   <footer>
