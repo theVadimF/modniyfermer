@@ -587,8 +587,7 @@ footer .mobile_text a {
   font-size: 50px;
   font-style: normal;
   font-weight: 500;
-  line-height: 55px;
-  max-width: 685px;
+  line-height: 55px; /* 110% */
 }
 
 .page_top .heading.__berry_offset {
@@ -1023,8 +1022,7 @@ footer .mobile_text a {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  line-height: 125%;
+  line-height: 24px;
 }
 
 .about_text.__top {
@@ -1089,8 +1087,19 @@ footer .mobile_text a {
 
 .about_bottom .graphic {
   position: absolute;
-  top: 0px;
-  right: -186px;
+  top: -57px;
+  right: -174px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about_bottom .about_strong {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 10px;
 }
 
 .about_bottom .about_text {
@@ -1099,29 +1108,34 @@ footer .mobile_text a {
 }
 
 .about_bottom .map_wrap {
-  width: 436px;
-  height: 328px;
+  width: 600px;
+  height: 430px;
+
+  margin-top: 25px;
+  position: relative;
+}
+
+.about_bottom .map_wrap .border {
   border-radius: 15px;
   overflow: hidden;
-  margin-top: 25px;
 }
 
 .about_bottom .bigger {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 55px
 }
 
 .about_bottom .big {
   color: var(--blue);
   font-family: Cera Round Pro;
-  font-size: 36px;
+  font-size: 30px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 102.2%;
-  width: 381px;
+  font-weight: 500;
+  line-height: 40px;
+  max-width: 425px;
 }
 
 .about_bottom .right {
@@ -1130,12 +1144,14 @@ footer .mobile_text a {
 
 .about_bottom .socials {
   display: flex;
-  gap: 57px;
+  /* gap: 69px; */
+  justify-content: space-around;
   margin-top: 40px;
 }
 
 .about_bottom .social {
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-decoration: none;
   color: var(--blue);
@@ -1162,7 +1178,7 @@ footer .mobile_text a {
   display: grid;
   grid-template-columns: 680px 1fr;
   gap: 0 30px;
-  margin-top: 25px;
+  margin-top: 81px;
   margin-bottom: 60px;
 }
 
@@ -1287,6 +1303,10 @@ footer .mobile_text a {
   font-family: Cera Round Pro;
   font-size: 30px;
   font-weight: 500;
+  background-image: url('./img/ico/ruble.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom 6px;
+  padding-right: 23px;
 }
 
 .product_card .info {
@@ -1572,6 +1592,24 @@ footer .copyright {
     grid-template-columns: repeat(3, 1fr);
     gap: 26px 10px;
   }
+
+  .about_bottom {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about_bottom .map_wrap {
+    width: 100%;
+  }
+
+  .about_bottom .graphic {
+    top: -217px;
+    right: -65px;
+  }
+
+  .about_bottom .big {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1090px) {
@@ -1722,7 +1760,6 @@ footer .copyright {
   .page_top .graphic {
     width: 119px;
     height: 83px;
-    align-self: flex-start;
   }
 
   .catalog_cards {
@@ -1746,25 +1783,13 @@ footer .copyright {
   .about_middle {
     padding-left: 40px;
   }
-  
-  .about_bottom {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .about_bottom .map_wrap {
-    width: 100%;
-  }
-
-  .about_bottom .graphic {
-    right: -90px;
-  }
 
   .about_bottom .big {
     width: 100%;
   }
 
   .product_card {
+    margin-top: 40px;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -2178,27 +2203,39 @@ footer .copyright {
   }
 
   .about_bottom {
-    padding-top: 40px;
+    padding-top: 25px;
     margin-bottom: 40px;
   }
 
   .about_bottom .bigger {
-    font-size: 36px;
+    font-size: 26px;
+    line-height: normal;
   }
 
   .about_bottom .big {
-    font-size: 24px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .about_text {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .about_bottom .about_strong {
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .about_bottom .graphic {
-    width: 127px;
-    height: 192px;
-    right: -45px;
-    top: -40px;
+    width: 100px;
+    height: 151px;
+    right: -35px;
+    top: -42px;
+  }
+
+  .about_bottom .map_wrap {
+    margin-top: 50px;
   }
 
   .about_bottom .socials {
@@ -2365,6 +2402,10 @@ footer .copyright {
   footer .socials {
     gap: 22px;
   }
+
+  .about_bottom .about_text {
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -2374,6 +2415,10 @@ footer .copyright {
 
   .product_card .images .slide {
     height: 250px;
+  }
+
+  .page_top .heading.__mobile_cut .mobile_hide {
+    display: none;
   }
 }
 
