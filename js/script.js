@@ -92,3 +92,30 @@ $('.close_filter').click(async function() {
   await new Promise(r => setTimeout(r, 400));
   $('.filters').removeClass('__open');
 })
+
+if ($('.custom_map_wrap').length) {
+  const pickup_slider = new Swiper('.pickup_slider', {
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      1200: {
+        slidesPerView: 4,
+      },
+      1020: {
+        slidesPerView: 3,
+      },
+      800: {
+        slidesPerView: 2,
+      }
+    }
+  });
+
+  $('.pickup_slider .controls .btn.__next').click(function() {
+    pickup_slider.slideNext();
+  })
+
+  $('.pickup_slider .controls .btn.__back').click(function() {
+    pickup_slider.slidePrev();
+  })
+}

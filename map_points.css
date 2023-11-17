@@ -1,8 +1,12 @@
 .custom_map_wrap {
+  position: relative;
+  margin-top: 40px;
+}
+
+.custom_map_wrap .wrap {
   height: 600px;
   width: 100%;
   position: relative;
-  margin-top: 40px;
 }
 
 .custom_map_wrap .blue_filter {
@@ -75,7 +79,123 @@
   object-fit: cover;
 }
 
+.custom_map_wrap .info_box {
+  position: absolute;
+  z-index: 2;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #FFF;
+  padding: 35px 27px;
+  width: 290px;
+  border-radius: 20px;
+  border: 2px solid #4C85AA;
+  box-sizing: border-box;
+}
+
+.custom_map_wrap .name {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.custom_map_wrap .time {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.custom_map_wrap .info {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.custom_map_wrap .wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.pickup_slider {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.pickup_slider .controls {
+  width: fit-content;
+  display: flex;
+  gap: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pickup_slider .controls .btn {
+  padding: 0;
+  background: none;
+  border: none;
+  margin-top: 40px;
+}
+
+.pickup_slider .pickup_point {
+  background-color: #FFF;
+  padding: 35px 27px;
+  border-radius: 20px;
+  border: 2px solid #4C85AA;
+  box-sizing: border-box;
+}
+
+.pickup_slider .pickup_point .name {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.pickup_slider .pickup_point .time {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.pickup_slider .pickup_point .info {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.pickup_slider .pickup_point .link {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
 @media (max-width: 749px) {
+
+  .custom_map_wrap .info_box {
+    position: unset;
+    transform: none;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
 
   .custom_map_wrap .point {
     height: 40px;
@@ -112,7 +232,14 @@
     right: -127px;
   }
 
-  .custom_map_wrap {
+  .custom_map_wrap .wrap {
     height: 430px;
+  }
+}
+
+@media (max-width: 660px) {
+  .pickup_slider {
+    margin-bottom: 40px;
+    margin-top: 30px;
   }
 }

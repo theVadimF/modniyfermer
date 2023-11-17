@@ -6,6 +6,7 @@
   <title>Главная</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="map_points.css">
+  <link rel="stylesheet" href="./js/lib/swiper/swiper-bundle.min.css">
 </head>
 <body>
   <div class="mobile_menu">
@@ -137,21 +138,113 @@
     </div>
   </div>
   <div class="custom_map_wrap content-wrap">
-    <!-- <div class="inner">
-      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4f811cc89718401157352b505b96cbb890ee0445e8e7e30029bf4480d2493165&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
-    </div> -->
-    <picture>
-      <source media="(max-width: 749px)" srcset="./img/map_screen_mobile.png">
-      <img src="./img/map_screen.png" alt="" class="map_img">
-    </picture>
-    <div class="blue_filter"></div>
-    <div class="points">
-      <button class="point __1 __active"></button>
-      <button class="point __2"></button>
-      <button class="point __3"></button>
-      <button class="point __4"></button>
-      <button class="point __5"></button>
-      <button class="point __6"></button>
+    <div class="info_box">
+      <h3 class="name">Профсоюзная</h3>
+      <p class="time">Понедельник с 17:00 до 19:00</p>
+      <p class="info">
+        ул. Архитектора Власова,
+        через дорогу от дома №1
+        парковка-карман. Как ориентир 2 большие синие
+        ЛЭП
+      </p>
+    </div>
+    <div class="wrap">
+      <picture>
+        <source media="(max-width: 749px)" srcset="./img/map_screen_mobile.png">
+        <img src="./img/map_screen.png" alt="" class="map_img">
+      </picture>
+      <div class="blue_filter"></div>
+      <div class="points">
+        <button class="point __1 __active"></button>
+        <button class="point __2"></button>
+        <button class="point __3"></button>
+        <button class="point __4"></button>
+        <button class="point __5"></button>
+        <button class="point __6"></button>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrap">
+    <div class="pickup_slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="pickup_point">
+            <h3 class="name">Профсоюзная</h3>
+            <p class="time">Понедельник с 17:00 до 19:00</p>
+            <p class="info">
+              ул. Архитектора Власова,
+              через дорогу от дома №1
+              парковка-карман. Как ориентир 2 большие синие
+              ЛЭП
+            </p>
+            <a href="" class="link">Карта</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pickup_point">
+            <h3 class="name">Профсоюзная</h3>
+            <p class="time">Понедельник с 17:00 до 19:00</p>
+            <p class="info">
+              ул. Архитектора Власова,
+              через дорогу от дома №1
+              парковка-карман. Как ориентир 2 большие синие
+              ЛЭП
+            </p>
+            <a href="" class="link">Карта</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pickup_point">
+            <h3 class="name">Профсоюзная</h3>
+            <p class="time">Понедельник с 17:00 до 19:00</p>
+            <p class="info">
+              ул. Архитектора Власова,
+              через дорогу от дома №1
+              парковка-карман. Как ориентир 2 большие синие
+              ЛЭП
+            </p>
+            <a href="" class="link">Карта</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pickup_point">
+            <h3 class="name">Профсоюзная</h3>
+            <p class="time">Понедельник с 17:00 до 19:00</p>
+            <p class="info">
+              ул. Архитектора Власова,
+              через дорогу от дома №1
+              парковка-карман. Как ориентир 2 большие синие
+              ЛЭП
+            </p>
+            <a href="" class="link">Карта</a>
+         </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="pickup_point">
+            <h3 class="name">Профсоюзная</h3>
+            <p class="time">Понедельник с 17:00 до 19:00</p>
+            <p class="info">
+              ул. Архитектора Власова,
+              через дорогу от дома №1
+              парковка-карман. Как ориентир 2 большие синие
+              ЛЭП
+            </p>
+            <a href="" class="link">Карта</a>
+         </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btn __back">
+          <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.8141 24.0625L2.12397 10.1319L23.0332 1.77711L19.8141 24.0625Z" stroke="#4C85AA" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="btn __next">
+          <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.30437 2.82665L22.8031 16.9968L1.78199 25.0661L5.30437 2.82665Z" stroke="#4C85AA" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
   <footer>
@@ -198,5 +291,6 @@
   </footer>
 </body>
 <script src="./js/lib/jquery-3.7.1.min.js"></script>
+<script src="./js/lib/swiper/swiper-bundle.min.js"></script>
 <script src="./js/script.js"></script>
 </html>
