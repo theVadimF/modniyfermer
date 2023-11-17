@@ -70,3 +70,25 @@ if ($('.product_card').length) {
     review_slider.slidePrev();
   })
 }
+
+$('.category_btn').click(function() {
+  if ($(this).hasClass('__open')) {
+    $(this).removeClass('__open');
+    $(this).siblings('.contents').slideUp();
+  } else {
+    $(this).addClass('__open');
+    $(this).siblings('.contents').slideDown();
+  }
+})
+
+$('.open_filters').click(async function() {
+  $('.filters').addClass('__open');
+  await new Promise(r => setTimeout(r, 10));
+  $('.filters').addClass('__visible');
+})
+
+$('.close_filter').click(async function() {
+  $('.filters').removeClass('__visible');
+  await new Promise(r => setTimeout(r, 400));
+  $('.filters').removeClass('__open');
+})
