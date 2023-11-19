@@ -1732,11 +1732,18 @@ footer .copyright {
 }
 
 .order_list .item {
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 115px 280px 170px 150px 1fr;
+  gap: 50px;
   align-items: center;
   padding: 25px 30px;
   border: 1.5px solid #4C85AA;
   border-radius: 30px;
+}
+
+.order_list .item.__with_size {
+  grid-template-columns: 115px 190px 180px 95px 110px 150px 1fr;
 }
 
 .order_list .item .right {
@@ -1757,10 +1764,34 @@ footer .copyright {
   font-family: Cera Round Pro;
   font-size: 20px;
   font-weight: 500;
-  text-align: center;
-  width: 300px;
-  margin-left: 15px;
-  margin-right: 15px;
+  /* text-align: center; */
+  /* width: 300px; */
+  /* margin-left: 15px; */
+  /* margin-right: 15px; */
+}
+
+.order_list .item .change {
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 102.2%;
+  text-decoration-line: underline;
+  cursor: pointer;
+  padding: 0;
+  width: fit-content;
+}
+
+.order_list .item .additional {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 102.2%;
 }
 
 .order_list .item .price {
@@ -1771,9 +1802,10 @@ footer .copyright {
   font-weight: 500;
   display: flex;
   gap: 5px;
-  width: 145px;
+  /* width: 145px; */
   justify-content: flex-end;
-  margin-right: 50px;
+  /* margin-right: 35px; */
+  /* margin-right: 50px; */
 }
 
 .order_list .item .ruble {
@@ -1848,6 +1880,7 @@ footer .copyright {
   height: 20px;
   background-color: #fff;
   border-radius: 3px;
+  flex-shrink: 0;
 }
 
 .order_form .legal_checkbox .box .check {
@@ -2085,6 +2118,29 @@ footer .copyright {
   border: none;
 }
 
+@media (max-width: 1320px) {
+  .order_list .item.__with_size {
+    grid-template-columns: 148px 1fr;
+    gap: 15px 30px;
+  }
+
+  .order_list .item.__with_size .thumb {
+    grid-column: 1;
+    grid-row: 1/5;
+    height: 100%;
+    width: 100%;
+  }
+
+  .order_list .item.__with_size .name {
+    grid-column: 2;
+  }
+
+  .order_list .item.__with_size .price {
+    justify-content: flex-start;
+    grid-row: 2;
+  }
+}
+
 @media (max-width: 1260px) {
   .index_content {
     display: flex;
@@ -2210,13 +2266,13 @@ footer .copyright {
     height: 105px;
   }
 
-  .order_list .item .right {
+  .order_list .item.__no_size .right {
     margin-left: 15px;
     display: grid;
     grid-template-columns: 1fr 20px;
   }
 
-  .order_list .item .name {
+  .order_list .item.__no_size .name {
     width: 100%;
     grid-row: 1;
     grid-column: 2/3;
@@ -2225,26 +2281,26 @@ footer .copyright {
     margin-bottom: 18px;
   }
 
-  .order_list .item .price {
+  .order_list .item.__no_size .price {
     width: 100%;
     grid-column: 1/3;
     justify-content: flex-start;
     margin-bottom: 12px;
   }
 
-  .order_list .item .cart_ctl .spinbox {
+  .order_list .item.__no_size .cart_ctl .spinbox {
     padding: 10px 25px;
   }
 
-  .order_list .item .cart_ctl .spinbox .input {
+  .order_list .item.__no_size .cart_ctl .spinbox .input {
     font-size: 14px;
   }
 
-  .order_list .item .cart_ctl .spinbox .btn {
+  .order_list .item.__no_size .cart_ctl .spinbox .btn {
     font-size: 16px;
   }
 
-  .order_list .item .thumb {
+  .order_list .item.__no_size .thumb {
     height: 100%;
     width: 120px;
   }
@@ -2509,7 +2565,7 @@ footer .copyright {
     grid-column: 2/4;
   }
 
-  .order_list .item .price {
+  .order_list .item .price.__no_size {
     grid-column: 2/4;
     grid-row: 2;
   }
@@ -3314,6 +3370,50 @@ footer .copyright {
 
   .order_list .item {
     padding: 20px;
+  }
+
+  .order_list .item.__with_size {
+    grid-template-columns: 120px 1fr;
+    gap: 0px 15px;
+  }
+
+  .order_list .item .additional {
+    font-size: 14px;
+  }
+
+  .order_list .item .change {
+    font-size: 14px;
+  }
+
+  .order_list .item.__with_size .cart_ctl {
+    margin-top: 20px;
+  }
+
+  .order_list .item.__with_size .trash {
+    margin-top: 20px;
+  }
+
+  .order_list .item.__with_size .cart_ctl .spinbox {
+    width: 120px;
+    height: 35px;
+    box-sizing: border-box;
+  }
+
+  .order_list .item.__with_size .cart_ctl .spinbox .input {
+    font-size: 14px;
+  }
+
+  .order_list .item.__with_size .cart_ctl .spinbox .btn {
+    font-size: 14px;
+  }
+
+  .order_list .item .trash svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .order_list .item.__with_size .thumb {
+    height: 115px;
   }
 }
 
