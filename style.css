@@ -2254,6 +2254,15 @@ footer .copyright {
   margin-bottom: 80px;
 }
 
+.history_cards .empty {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 102.2%;
+}
+
 .history_cards .card .bold {
   color: var(--blue);
   font-family: Cera Round Pro;
@@ -2489,6 +2498,34 @@ footer .copyright {
   background-color: var(--blue);
   border-radius: 50px;
   padding: 17px 39px;
+}
+
+.legal_page {
+  margin-bottom: 80px;
+}
+
+.legal_page .heading {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.legal_page .text {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.legal .text strong {
+  font-weight: 700;
 }
 
 @media (max-width: 1320px) {
@@ -4004,6 +4041,20 @@ footer .copyright {
   .login_code .submit {
     font-size: 14px;
     padding: 13px 40px;
+  }
+
+  .legal_page {
+    margin-bottom: 40px;
+  }
+
+  .legal_page .heading {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .legal_page .text {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 
