@@ -187,7 +187,7 @@ header .right {
 }
 
 header .login {
-  padding: 12px 11px;
+  padding: 12px;
   border: 1px solid var(--blue);
   border-radius: 200px;
   color: var(--blue);
@@ -199,6 +199,18 @@ header .login {
   text-transform: uppercase;
   text-decoration: none;
   margin: 0 31;
+  position: relative;
+}
+
+header .login .mail {
+  display: none;
+  position: absolute;
+  top: 3px;
+  right: -12px;
+}
+
+header .login .mail.__visible {
+  display: block;
 }
 
 .cart {
@@ -2118,6 +2130,206 @@ footer .copyright {
   border: none;
 }
 
+.lk_mobile_nav {
+  display: none;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.lk_mobile_nav .link {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+}
+
+.lk_mobile_nav .button {
+  color: #FFF;
+  font-family: Cera Round Pro;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  background-color: var(--blue);
+  border-radius: 50px;
+  padding: 10px 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.lk_mobile_nav .button svg {
+  transition: transform 0.4s;
+}
+
+.lk_mobile_nav .button.__open svg {
+  transform: rotate(180deg);
+}
+
+
+.lk_mobile_nav .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px 0;
+  border-radius: 15px;
+  border: 1px solid #4C85AA;
+  margin-top: 5px;
+}
+
+.lk_nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.lk_nav .link {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.lk_nav .link.__active {
+  padding: 17px 25px;
+  background-color: var(--blue);
+  color: #FFF;
+  border-radius: 50px;
+}
+
+.history_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.history_cards .card .bold {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 102.2%;
+}
+
+.history_cards .card .normal {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 102.2%;
+}
+
+.history_cards .card .normal.__price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.history_cards .card .normal.__price .ruble {
+  margin-bottom: 1px;
+}
+
+.history_cards .card .normal.__checkmark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.history_cards .card {
+  padding: 30px;
+  border-radius: 30px;
+  border: 1.5px solid #4C85AA;
+  box-sizing: border-box;
+}
+
+.history_cards .card .items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 17px;
+  max-height: 150px;
+  overflow-y: auto;
+  scrollbar-color: var(--blue) #FFF;
+}
+
+.history_cards .card .items .item {
+  display: flex;
+  gap: 13px;
+}
+
+.history_cards .card .items .item .thumb {
+  width: 75px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* width */
+.history_cards .card .items::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.history_cards .card .items::-webkit-scrollbar-track {
+  background: #FFF;
+  border-radius: 30px;
+}
+
+/* Handle */
+.history_cards .card .items::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 30px;
+  width: 20px;
+}
+
+.history_cards .card .items .item.__big .thumb {
+  width: 155px;
+  height: 145px;
+  flex-shrink: 0;
+}
+
+.history_cards .card .items .item .line {
+  display: flex;
+  gap: 30px;
+  margin-top: 14px;
+}
+
+.history_cards .card .items .item.__big .line {
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.history_cards .card .line {
+  display: flex;
+  gap: 30px;
+}
+
+.history_cards .card .info_block {
+  margin-top: 20px;
+}
+
+.history_cards .card .info_block .bold {
+  margin-bottom: 15px;
+}
+
+.history_cards .card .info_block .bold.__sdek {
+  margin-bottom: 12px;
+}
+
 @media (max-width: 1320px) {
   .order_list .item.__with_size {
     grid-template-columns: 148px 1fr;
@@ -2166,6 +2378,10 @@ footer .copyright {
   }
 
   .catalog_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history_cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -2593,6 +2809,17 @@ footer .copyright {
   }
 }
 
+@media (max-width: 850px) {
+  .history_cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .history_cards .card .items {
+    max-height: unset;
+  }
+}
+
 @media (max-width: 780px) {
 
   /* header {
@@ -2709,6 +2936,13 @@ footer .copyright {
   header .login {
     font-size: 10px;
     padding: 6px 9px;
+  }
+
+  header .login .mail {
+    height: 16px;
+    width: 16px;
+    top: 1px;
+    right: -10px;
   }
 
   header .right {
@@ -3414,6 +3648,74 @@ footer .copyright {
 
   .order_list .item.__with_size .thumb {
     height: 115px;
+  }
+
+  .lk_nav {
+    display: none;
+  }
+
+  .lk_mobile_nav {
+    display: flex;
+  }
+
+  .history_cards .card .bold {
+    font-size: 16px;
+  }
+
+  .history_cards .card .info_block .bold {
+    margin-bottom: 10px;
+  }
+
+  .history_cards .card .normal {
+    font-size: 14px;
+  }
+
+  .history_cards .card .items .item .line {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .history_cards .card .items .item.__big .line {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .history_cards .card .items .item.__big .thumb {
+    width: 75px;
+    height: 65px;
+  }
+
+  .history_cards .card .items {
+    margin-top: 15px;
+  }
+
+  .history_cards .card .info_block {
+    margin-top: 15px;
+  }
+
+  .history_cards .card .info_block.__line {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .history_cards .card .info_block.__line .bold {
+    margin-bottom: 0;
+  }
+
+  .history_cards .card .normal.__price {
+    gap: 3px;
+  }
+
+  .history_cards .card .normal.__price .ruble {
+    height: 10px;
+  }
+
+  .history_cards {
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }
 

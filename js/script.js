@@ -119,3 +119,13 @@ if ($('.custom_map_wrap').length) {
     pickup_slider.slidePrev();
   })
 }
+
+$('.lk_mobile_nav .button').click(function() {
+  if ($(this).hasClass('__open')) {
+    $(this).removeClass('__open')
+    $('.lk_mobile_nav .menu').slideUp();
+  } else {
+    $(this).addClass('__open')
+    $('.lk_mobile_nav .menu').slideDown();
+  }
+})
