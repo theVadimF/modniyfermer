@@ -1017,6 +1017,12 @@ footer .mobile_text a {
   gap: 20px 24px;
 }
 
+.catalog_cards.__lk {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
 .catalog_cards .card {
   padding: 25px;
   box-sizing: border-box;
@@ -2363,6 +2369,74 @@ footer .copyright {
   margin-bottom: 12px;
 }
 
+.login_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.login_page .heading {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 102.2%;
+  margin-bottom: 30px;
+}
+
+.login_page .bottom {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.login_page .input {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 20px;
+  border: 1.5px solid #4C85AA;
+  background: #F3F2ED;
+  padding: 17px 20px;
+  min-width: 300px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.login_page .submit {
+  color: #FFF;
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: var(--blue);
+  border: none;
+  border-radius: 20px;
+  padding: 17px 25px;
+  width: 300px;
+  box-sizing: border-box;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.login_page .input::placeholder {
+  color: var(--blue);
+}
+
+.login_page .bottom .timer {
+  font-size: 20px;
+}
+
 @media (max-width: 1320px) {
   .order_list .item.__with_size {
     grid-template-columns: 148px 1fr;
@@ -2411,6 +2485,10 @@ footer .copyright {
   .order_list .item.__history .change {
     /* justify-content: flex-end; */
     margin-left: auto;
+  }
+
+  .catalog_cards.__lk {
+    grid-template-columns: repeat(3, 1fr);
   }
 
 }
@@ -2530,6 +2608,10 @@ footer .copyright {
     flex-direction: column;
     gap: 10px;
     align-items: center;
+  }
+
+  .catalog_cards.__lk {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -3814,6 +3896,37 @@ footer .copyright {
   .order_list.__history {
     margin-top: 20px;
     margin-bottom: 40px;
+  }
+
+  .catalog_cards.__lk {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .login_page {
+    align-items: flex-start;
+  }
+
+  .login_page .heading {
+    font-size: 20px;
+  }
+
+  .login_page .input {
+    width: 100%;
+    padding: 13px 25px;
+  }
+
+  .login_page .submit {
+    padding: 13px 25px;
+    width: 100%;
+  }
+
+  .login_page .bottom {
+    font-size: 14px;
+  }
+
+  .login_page .bottom .timer {
+    font-size: 18px;
   }
 }
 
