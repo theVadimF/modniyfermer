@@ -129,3 +129,33 @@ $('.lk_mobile_nav .button').click(function() {
     $('.lk_mobile_nav .menu').slideDown();
   }
 })
+
+let $inputs = $('.login_code .numbers .digit').on('input', e => {
+  let $input = $(e.target);
+  let index = $inputs.index($input);
+  if ($input.val().length === $input.prop('maxlength')) {
+    $inputs.eq(index + 1).focus();
+  }
+});
+
+$('.login_code .numbers .digit').on('input', function(e) {
+  let $input = $(e.target);
+  let index = $inputs.index($input);
+  if ($input.val().length === $input.prop('maxlength')) {
+    $inputs.eq(index + 1).focus();
+  }
+});
+
+$('.login_code .numbers .digit').on('keydown', function(e) {
+  if (e.keyCode == 8) {
+      let $input = $(e.target);
+      let index = $inputs.index($input);
+      if ($input.val().length === $input.prop('maxlength')) {
+        if (e.target.value === "") {
+          $inputs.eq(index - 1).focus();
+        }
+      } else if (index > 0) {
+        $inputs.eq(index - 1).focus();
+      }
+    }
+})

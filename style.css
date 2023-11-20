@@ -2437,6 +2437,60 @@ footer .copyright {
   font-size: 20px;
 }
 
+.login_code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.login_code .heading {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 102.2%;
+}
+
+.login_code .numbers {
+  display: flex;
+  gap: 15px;
+}
+
+.login_code .numbers .digit {
+  border-radius: 10px;
+  border: 1px solid var(--blue);
+  background-color: var(--beige);
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 80px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login_code .submit {
+  color: #FFF;
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  background-color: var(--blue);
+  border-radius: 50px;
+  padding: 17px 39px;
+}
+
 @media (max-width: 1320px) {
   .order_list .item.__with_size {
     grid-template-columns: 148px 1fr;
@@ -3927,6 +3981,29 @@ footer .copyright {
 
   .login_page .bottom .timer {
     font-size: 18px;
+  }
+
+  .login_code {
+    gap: 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .login_code .heading {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .login_code .numbers .digit {
+    font-size: 30px;
+    width: 50px;
+    height: 56px;
+    margin-bottom: 30px;
+  }
+
+  .login_code .submit {
+    font-size: 14px;
+    padding: 13px 40px;
   }
 }
 
