@@ -159,3 +159,27 @@ $('.login_code .numbers .digit').on('keydown', function(e) {
       }
     }
 })
+
+$('#cookie_open').click(function() {
+  $('.cookies_popup').fadeIn();
+})
+
+$('#order_popup_open').click(function() {
+  $('#order_popup').fadeIn();
+})
+
+$('#cart_popup_open').click(function() {
+  $('#cart_popup').fadeIn();
+})
+
+$('#close_cookie').click(function() {
+  $('.cookies_popup').fadeOut();
+})
+
+$('#close_order_popup').click(function() {
+  $('#order_popup').fadeOut();
+})
+
+$('#close_cart_popup').click(function() {
+  $('#cart_popup').fadeOut();
+})

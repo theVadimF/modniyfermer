@@ -2528,6 +2528,112 @@ footer .copyright {
   font-weight: 700;
 }
 
+.cookies_popup {
+  background-color: #EAEAEA;
+  border-radius: 20px;
+  border: 1px solid #4C85AA;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 600;
+  box-sizing: border-box;
+  padding: 18px 30px;
+  gap: 50px;
+}
+
+.cookies_popup .btn {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 10px;
+  border: 1px solid #4C85AA;
+  background: #EAEAEA;
+  padding: 9px 25px;
+}
+
+.cookies_popup .text {
+  color: var(--blue);
+  font-family: Cera Round Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(217, 217, 217, 0.7);
+  display: flex;
+  justify-content: center;
+}
+
+.popup .content {
+  border-radius: 40px;
+  border: 2px solid #4C85AA;
+  background: #F3F2ED;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 60px 133px;
+  margin-top: 190px;
+}
+
+.popup .content .title {
+  color: var(--blue, #4C85AA);
+  font-family: Cera Round Pro;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 55px;
+  margin-bottom: 30px;
+}
+
+.popup .content .text {
+  color: var(--blue, #4C85AA);
+  text-align: center;
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+
+.popup .content .btn {
+  color: #FFF;
+  font-family: Cera Round Pro;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  background-color: var(--blue);
+  border: none;
+  padding: 20px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.popup .content .btn.__link {
+  text-decoration: none;
+  border: 2px solid var(--blue);
+  background: #F3F2ED;
+  color: var(--blue);
+}
+
+.popup .content .btns {
+  margin-top: 30px;
+  display: flex;
+  gap: 28px;
+}
+
 @media (max-width: 1320px) {
   .order_list .item.__with_size {
     grid-template-columns: 148px 1fr;
@@ -3023,6 +3129,34 @@ footer .copyright {
 
   .order_list.__yagoda .cart_ctl {
     grid-column: 2;
+  }
+
+  .popup .content .title {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  .popup .content .btns {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .popup .content .btn {
+    width: fit-content;
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+
+  .popup .content .text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .popup .content {
+    padding: 35px 50px;
   }
 }
 
